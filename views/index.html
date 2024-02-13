@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valentine's Day Proposal</title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <link rel="icon" type="image/x-icon" href="/images/heart-solid.svg">
+</head>
+<body>
+<div class="wrapper">
+  <h2>Would you, Kuwa Siwale, be my love and only? My Valentine? My everything? In this life and the
+    next.</h2>
+  <img class="gif" alt="gif" src="/images/valentines_question.webp"/>
+  <div class="btn-group">
+    <a href="/yes_proposal" class="yes-btn">Yes</a>
+    <button id="no-btn">No</button>
+  </div>
+</div>
+<script>
+  const noBtn = document.getElementById("no-btn");
+  noBtn.addEventListener("mouseover", () => {
+    const noBtnRect = noBtn.getBoundingClientRect();
+    const maxX = window.innerWidth - noBtnRect.width;
+    const maxY = window.innerHeight - noBtnRect.height;
+
+    const randomX = Math.floor(Math.random() * maxX);
+    const randomY = Math.floor(Math.random() * maxY);
+
+    noBtn.style.left = randomX + "px";
+    noBtn.style.top = randomY + "px";
+  });
+
+</script>
+</body>
+</html>
+  
